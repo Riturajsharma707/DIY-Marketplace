@@ -26,10 +26,6 @@ const Navigation = () => {
     setDropdownOpen(!showSiderbar);
   };
 
-  // const closeSidebar = () => {
-  //   setShowSidebar(false);
-  // };
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
