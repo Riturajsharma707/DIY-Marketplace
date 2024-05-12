@@ -59,7 +59,7 @@ const Login = () => {
                 id="email"
                 className="mt-2 p-2 border bg-slate-700 rounded w-full"
                 value={email}
-                placeholder="abc@gmail.com"
+                placeholder="abcd@gmail.com"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
