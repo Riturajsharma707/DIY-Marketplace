@@ -1,4 +1,3 @@
-import React from "react";
 import { apiSlice } from "./apiSlice";
 import { CATEGORY_URL } from "../constant";
 
@@ -7,7 +6,7 @@ export const categoryApiSlice = apiSlice.injectEndpoints({
     createCategory: builder.mutation({
       query: (newCategory) => ({
         url: `${CATEGORY_URL}`,
-        methon: "POST",
+        method: "POST",
         body: newCategory,
       }),
     }),
@@ -21,9 +20,9 @@ export const categoryApiSlice = apiSlice.injectEndpoints({
     }),
 
     deleteCategory: builder.mutation({
-      query: ({ categoryId }) => ({
+      query: (categoryId) => ({
         url: `${CATEGORY_URL}/${categoryId}`,
-        methon: "DELETE",
+        method: "DELETE",
       }),
     }),
 

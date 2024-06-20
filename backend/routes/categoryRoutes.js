@@ -2,7 +2,7 @@ import express from "express";
 import {
   createCategory,
   updateCategory,
-  removeCategory,
+  deleteCategory,
   listCategories,
   readCategory,
 } from "../controllers/categoryController.js";
@@ -15,7 +15,7 @@ router.route("/").post(authenticate, authorizeAdmin, createCategory);
 router.route("/:categoryId").put(authenticate, authorizeAdmin, updateCategory);
 router
   .route("/:categoryId")
-  .delete(authenticate, authorizeAdmin, removeCategory);
+  .delete(authenticate, authorizeAdmin, deleteCategory);
 
 router.route("/categories").get(listCategories);
 
